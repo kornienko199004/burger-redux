@@ -103,17 +103,6 @@ class ContactData extends Component {
       price: this.props.price,
       orderData: formData
     };
-
-    axios.post('/orders.json', order)
-      .then((res) => {
-        console.log(res);
-        this.setState({ loading: false });
-        this.props.history.push('/');
-      })
-      .catch((err) => {
-        console.log(err);
-        this.setState({ loading: false });
-      });
   };
 
   checkValidity = (value, rules) => {
